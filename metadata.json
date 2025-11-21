@@ -1,0 +1,5 @@
+{
+  "name": "Circuit Fault Detective",
+  "description": "A cyber-detective electronics diagnostic game. Identify the fault in the schematic to advance.",
+  "requestFramePermissions": []
+}
