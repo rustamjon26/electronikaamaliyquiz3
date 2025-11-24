@@ -160,4 +160,325 @@ export const puzzles: CircuitPuzzle[] = [
     correctIndex: 0,
     explanation: "Darlington juftlik kuchaytirishi ikki bosqichli bo‘ladi — bog‘lanish yo‘q bo‘lsa, kuchaytirish yo‘q."
   }
-];
+  
+    {
+      id: 12,
+      title: "RLC Circuit — induktivlik teskari",
+      topic: "Analog",
+      difficulty: "hard",
+      image: "/faults/12.png",
+      faultOptions: [
+        "Induktor GND ga emas, seriyaga ulangan",
+        "Kondensator seriyadan chiqarilgan",
+        "Rezonans chastotasi noto‘g‘ri",
+        "Induktor teskari ulangan (noto‘g‘ri orientatsiya)"
+      ],
+      correctIndex: 3,
+      explanation: "Sxemadagi induktor markirovkasi teskari — coupling yo‘nalishi buzilgan."
+    },
+  
+    {
+      id: 13,
+      title: "BJT Differential Pair — toki bo‘lish noto‘g‘ri",
+      topic: "BJT",
+      difficulty: "hard",
+      image: "/faults/13.png",
+      faultOptions: [
+        "Tail-current rezistori noto‘g‘ri joylashgan",
+        "Emitterlar bir-biriga ulanmagan",
+        "Collector rezistorlar simmetrik emas",
+        "Baza bias noto‘g‘ri"
+      ],
+      correctIndex: 1,
+      explanation:
+        "Differensial juftlikda emitterlar bir nuqtada birlashishi shart — aks holda u ishlamaydi."
+    },
+  
+    {
+      id: 14,
+      title: "FET Source Follower — noto‘g‘ri chiqish nuqtasi",
+      topic: "FET",
+      difficulty: "medium",
+      image: "/faults/14.png",
+      faultOptions: [
+        "Chiqish Drain dan olingan — follower emas",
+        "Gate suzib qolgan",
+        "Yuklama qarshiligi juda katta",
+        "Quvvat teskari"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Source followerda chiqish Source dan olinadi. Bu yerda Drain dan olingan — bu common-source bo‘lib ketgan."
+    },
+  
+    {
+      id: 15,
+      title: "Schmitt Trigger — noto‘g‘ri feedback",
+      topic: "Digital",
+      difficulty: "hard",
+      image: "/faults/15.png",
+      faultOptions: [
+        "Feedback rezistori manfiy kirishga ulangan",
+        "Trigger histerezi hali yo‘q",
+        "Input to‘g‘ri joyda emas",
+        "Chiqish kondensator orqali olingan"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Schmitt Trigger uchun Rf har doim + kirishga boradi. Bu joyda noto‘g‘ri."
+    },
+  
+    {
+      id: 16,
+      title: "Transformer — noto‘g‘ri markaziy chiqish",
+      topic: "Power",
+      difficulty: "medium",
+      image: "/faults/16.png",
+      faultOptions: [
+        "Markaziy chiqish noto‘g‘ri joylanib, balans yo‘q",
+        "Chastota juda past",
+        "Quvvat kuchlanishi noto‘g‘ri",
+        "Induktivlik yetarli emas"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Center-tap noto‘g‘ri joyga olingan — AC balans buziladi."
+    },
+  
+    {
+      id: 17,
+      title: "Comparator — feedback yo‘q",
+      topic: "OpAmp",
+      difficulty: "easy",
+      image: "/faults/17.png",
+      faultOptions: [
+        "Comparator uchun pozitv feedback yo‘q",
+        "Non-inverting kirish ochiq",
+        "Ground uzilgan",
+        "Quvvat manbai yo‘q"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Comparatorlarda tez switching uchun little hysteresis bo‘ladi — Rf yo‘q."
+    },
+  
+    {
+      id: 18,
+      title: "Push-Pull Amplifier — dead-zone juda katta",
+      topic: "Analog",
+      difficulty: "hard",
+      image: "/faults/18.png",
+      faultOptions: [
+        "Bias diodlar yo‘q",
+        "Emitter rezistori teskari",
+        "Collector sig‘im noto‘g‘ri",
+        "Feedback noto‘g‘ri"
+      ],
+      correctIndex: 0,
+      explanation:
+        "A/B klass kuchaytirgichda ikki tranzistor o‘rtasida bias diod bo‘ladi — yo‘q bo‘lsa crossover distortsiya kuchli."
+    },
+  
+    {
+      id: 19,
+      title: "Full-Wave Rectifier — noto‘g‘ri transformator ulanishi",
+      topic: "Power",
+      difficulty: "medium",
+      image: "/faults/19.png",
+      faultOptions: [
+        "Center-tap noto‘g‘ri joyda",
+        "Bir diod yo‘q",
+        "Yuklama yerga ulanmagan",
+        "Kondensator teskari"
+      ],
+      correctIndex: 0,
+      explanation: "Markaziy chiqish noto‘g‘ri — 2 diodli full-wave ishlamaydi."
+    },
+  
+    {
+      id: 20,
+      title: "TTL Gate — noto‘g‘ri pull-up",
+      topic: "Digital",
+      difficulty: "medium",
+      image: "/faults/20.png",
+      faultOptions: [
+        "Pull-up juda katta",
+        "Pull-up yo‘q",
+        "Pull-down ishlatilgan",
+        "Ground noto‘g‘ri joyda"
+      ],
+      correctIndex: 1,
+      explanation:
+        "TTL chiqishlari oqim tortadi — har doim pull-up kerak."
+    },
+  
+    {
+      id: 21,
+      title: "BJT Darlington — noto‘g‘ri ulanish",
+      topic: "BJT",
+      difficulty: "medium",
+      image: "/faults/21.png",
+      faultOptions: [
+        "Darlington tranzistorlari emitterlari birlashtirilmagan",
+        "Collectorlar noto‘g‘ri joyda",
+        "Bias kuchlanishi teskari",
+        "Base rezistori yo‘q"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Darlington uchun emitterlar birlashadi — bu joyda ular ajralgan."
+    },
+  
+    {
+      id: 22,
+      title: "LM317 Regulator — ADJ noto‘g‘ri",
+      topic: "Power",
+      difficulty: "medium",
+      image: "/faults/22.png",
+      faultOptions: [
+        "ADJ pin noto‘g‘ri joyga ulangan",
+        "Input kuchlanishi past",
+        "R1 va R2 o‘rin almashgan",
+        "GND uzilgan"
+      ],
+      correctIndex: 0,
+      explanation:
+        "ADJ pin noto‘g‘ri nuqtaga ulangan — regulyatsiya ishlamaydi."
+    },
+  
+    {
+      id: 23,
+      title: "Schottky Diode — noto‘g‘ri polaritet",
+      topic: "Power",
+      difficulty: "easy",
+      image: "/faults/23.png",
+      faultOptions: [
+        "Diod teskari",
+        "Yuklama qarshiligi juda kichik",
+        "Kondensator yo‘q",
+        "Transformator noto‘g‘ri"
+      ],
+      correctIndex: 0,
+      explanation: "Schottky diod teskari — chiqish kuchlanishi nol bo‘ladi."
+    },
+  
+    {
+      id: 24,
+      title: "555 Timer — trigger noto‘g‘ri",
+      topic: "Digital",
+      difficulty: "medium",
+      image: "/faults/24.png",
+      faultOptions: [
+        "Trigger pin noto‘g‘ri",
+        "Discharge noto‘g‘ri ulangan",
+        "Threshold yerda",
+        "Reset past holatda"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Trigger pin noto‘g‘ri joyga ulangan — astable ishlamaydi."
+    },
+  
+    {
+      id: 25,
+      title: "Op-Amp Integrator — rezistor o‘rniga kondensator qo‘yilgan",
+      topic: "OpAmp",
+      difficulty: "hard",
+      image: "/faults/25.png",
+      faultOptions: [
+        "Rin faqat kondensator bilan almashtirilgan",
+        "Chiqish saturatsiyada",
+        "Kirish noto‘g‘ri joyda",
+        "Quvvat manbai yo‘q"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Integratorda kirishda R, feedbackda C bo‘ladi. Bu yerda ikkalasi teskari."
+    },
+  
+    {
+      id: 26,
+      title: "Flyback Diode — yo‘q",
+      topic: "Power",
+      difficulty: "easy",
+      image: "/faults/26.png",
+      faultOptions: [
+        "Diod yo‘q — releni o‘chirayotganda EMF kuchlanish kuchli",
+        "Noto‘g‘ri bobina ulanishi",
+        "Rele kontakti yopiq",
+        "Kuchlanish past"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Flyback diodsiz bobina o‘chishda 100V+ zarba beradi va tranzistor yonadi."
+    },
+  
+    {
+      id: 27,
+      title: "Charge Pump — noto‘g‘ri diod joylashuvi",
+      topic: "Analog",
+      difficulty: "hard",
+      image: "/faults/27.png",
+      faultOptions: [
+        "Bir diod teskari joylashgan",
+        "Kondensator noto‘g‘ri joyda",
+        "Chastota juda past",
+        "GND ajralgan"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Voltage doubler ishlashi uchun diodlarning yo‘nalishi juda muhim — biri teskari."
+    },
+  
+    {
+      id: 28,
+      title: "CMOS Inverter — PMOS teskari",
+      topic: "Digital",
+      difficulty: "medium",
+      image: "/faults/28.png",
+      faultOptions: [
+        "PMOS teskari ulangan — source pastda",
+        "NMOS teskari",
+        "Chiqish kondensator bilan to‘silgan",
+        "Gate floating"
+      ],
+      correctIndex: 0,
+      explanation:
+        "PMOS har doim source yuqori kuchlanishda bo‘lishi kerak — bu yerda pastda."
+    },
+  
+    {
+      id: 29,
+      title: "Comparator — non-inverting yerda",
+      topic: "OpAmp",
+      difficulty: "easy",
+      image: "/faults/29.png",
+      faultOptions: [
+        "Non-inverting pin yerga ulangan — noto‘g‘ri",
+        "Feedback noto‘g‘ri",
+        "Chiqish polariteti teskari",
+        "Inputlar almashtirilgan"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Comparatorning + kirishi yerga ulanib qolgan — funksiyasi buziladi."
+    },
+  
+    {
+      id: 30,
+      title: "3-Phase Rectifier — fazalar noto‘g‘ri joylashgan",
+      topic: "Power",
+      difficulty: "hard",
+      image: "/faults/30.png",
+      faultOptions: [
+        "Uch faza noto‘g‘ri tartibda ulangan",
+        "Bir diod o‘chgan",
+        "Kondensator teskari",
+        "Yuklama yerga noto‘g‘ri"
+      ],
+      correctIndex: 0,
+      explanation:
+        "Uch fazali to‘g‘rilagich faza tartibiga juda sezgir — noto‘g‘ri tartib AC pulsatsiyani oshiradi."
+    }
+  ];
+  
