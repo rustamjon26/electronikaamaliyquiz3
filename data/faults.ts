@@ -159,7 +159,7 @@ export const puzzles: CircuitPuzzle[] = [
     ],
     correctIndex: 0,
     explanation: "Darlington juftlik kuchaytirishi ikki bosqichli bo‘ladi — bog‘lanish yo‘q bo‘lsa, kuchaytirish yo‘q."
-  }
+  },
   
     {
       id: 12,
