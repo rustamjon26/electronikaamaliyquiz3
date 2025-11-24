@@ -1,12 +1,12 @@
 export interface CircuitPuzzle {
   id: number;
-  svg: string; // Raw SVG string content
-  topic: "BJT" | "FET" | "OpAmp" | "Amplifier" | "Digital" | "Power";
-  difficulty: "easy" | "medium" | "hard";
+  title: string;
+  topic: string;
+  difficulty: string;
+  image: string; // svg emas, PNG
   faultOptions: string[];
   correctIndex: number;
   explanation: string;
-  title: string;
 }
 
 export interface GameStats {
